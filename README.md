@@ -86,7 +86,8 @@ By the end of this process, the code will write the weights of the best model to
 ### 4. Perform detection using trained weights on image, set of images, video, or webcam
   > $ python predict.py -c config.json -i /path/to/image/or/video
   
-- For an image use : $ python predict.py -c config.json -i test.jpg 
-- For a video  use : $ python predict.py -c config.json -i test.mp4
-- For a real-time feed use : $ For an image use : $ python predict.py -c config.json -i webcam
+- For an image use : `$ python predict.py -c config.json -i test.jpg`
+- For a video  use : `$ python predict.py -c config.json -i test.mp4`
+- For a real-time feed use : $ For an image use : `$ python predict.py -c config.json -i webcam`
+
 It carries out detection on the image and write the image with detected bounding boxes to the output folder.
