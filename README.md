@@ -26,7 +26,7 @@ Alternatively, if you want to create your own dataset, follow these steps:
 
 ### 1. Edit config.json
 
-- Specify path of the **images** and **annots** folder in the `*"train_image_folder"*` and `*"train_annot_folder"*` fields.
+- Specify path of the **images** and **annots** folder in the ` *"train_image_folder"* ` and `*"train_annot_folder"*` fields.
 - The `*"labels"*` setting lists the labels to be trained on. Only images, which has labels being listed, are fed to the network.
 
 ```sh
