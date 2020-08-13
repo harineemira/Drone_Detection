@@ -27,7 +27,7 @@ Alternatively, if you want to create your own dataset, follow these steps:
 ### 1. Edit config.json
 
 - Specify path of the **images** and **annots** folder in the `"train_image_folder"` and `"train_annot_folder"` fields.
-- The `*"labels"*` setting lists the labels to be trained on. Only images, which has labels being listed, are fed to the network.
+- The `"labels"` setting lists the labels to be trained on. Only images, which has labels being listed, are fed to the network.
 
 ```sh
 {
@@ -74,17 +74,17 @@ Alternatively, if you want to create your own dataset, follow these steps:
 ```
 
 ### 2. Generate anchors for your dataset
-  > $ python gen_anchors.py -c config.json
+  > `$ python gen_anchors.py -c config.json`
 
 Copy the generated anchors printed on the terminal to the anchors setting in config.json.
 
 ### 3. Start the training process
-  > $ python train.py -c config.json
+  > `$ python train.py -c config.json`
 
 By the end of this process, the code will write the weights of the best model to file drone.h5 (or whatever name specified in the setting "saved_weights_name" in the config.json file). The training process stops when the loss on the validation set is not improved in 3 consecutive epoches.
 
 ### 4. Perform detection using trained weights on image, set of images, video, or webcam
-  > $ python predict.py -c config.json -i /path/to/image/or/video
+  > `$ python predict.py -c config.json -i /path/to/image/or/video`
   
 - For an image use : `$ python predict.py -c config.json -i test.jpg`
 - For a video  use : `$ python predict.py -c config.json -i test.mp4`
@@ -93,5 +93,6 @@ By the end of this process, the code will write the weights of the best model to
 It carries out detection on the image and write the image with detected bounding boxes to the output folder.
 
 ## Evaluation
-Compute the mAP performance of the model defined in saved_weights_name on the validation dataset defined in `"valid_image_folder"` and `"valid_annot_folder"`  > $ python evaluate.py -c config.json
+Compute the mAP performance of the model defined in saved_weights_name on the validation dataset defined in `"valid_image_folder"` and `"valid_annot_folder"`  
+> `$ python evaluate.py -c config.json`
 
