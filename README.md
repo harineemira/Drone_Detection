@@ -8,9 +8,16 @@ Detect drones from input image, video or real-time feed.
 - Download an image of a dog to test object detection.
 
    ```python
-    $ python yolo3_one_file_to_detect_them_all.py -w yolo3.weights -i dog.jpg
+    python yolo3_one_file_to_detect_them_all.py -w yolo3.weights -i dog.jpg
     ```
+```python
+def some_func(a,                        # nothing fancy here, yet
 
+              b: 'Annotation: '         # implicitly
+                 '"foo" for Foo, '      # concatenated
+                 '"bar" for Bar, '      # annotation
+                 '"other" otherwise'='otherwise'):
+```
 - Download pretrained weights for backend from [here.](https://1drv.ms/u/s!ApLdDEW3ut5fgQXa7GzSlG-mdza6) This weight must be put in the root folder of the repository. 
 
 ## Dataset
