@@ -82,3 +82,10 @@ Copy the generated anchors printed on the terminal to the anchors setting in con
   > $ python train.py -c config.json
 
 By the end of this process, the code will write the weights of the best model to file drone.h5 (or whatever name specified in the setting "saved_weights_name" in the config.json file). The training process stops when the loss on the validation set is not improved in 3 consecutive epoches.
+
+### 4. Perform detection using trained weights on image, set of images, video, or webcam
+  > $ python predict.py -c config.json -i /path/to/image/or/video
+  For an image use : $ python predict.py -c config.json -i test.jpg 
+  For a video  use : $ python predict.py -c config.json -i test.mp4
+  For a real-time feed use : $ For an image use : $ python predict.py -c config.json -i webcam
+It carries out detection on the image and write the image with detected bounding boxes to the output folder.
