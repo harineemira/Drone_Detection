@@ -17,8 +17,8 @@ YOLOv3 training requires images with .xml files in PASCAL-VOC format.
 Click [here] to Download Drone Dataset with .xml files in PASCAL-VOC format.
 
 Alternatively, if you want to create your own dataset, follow these steps:
-   >1. Collect images from Kaggle Dataset or Google Images.
-   >2. Download LabelImg(a graphical image annotation tool) from [this GitHub Repo.](https://github.com/tzutalin/labelImg)
-   >3. Setup LabelImg and draw a box around the object of interest in each image using the tool to generate XML files.
+   1. Collect images from Kaggle Dataset or Google Images.
+   2. Download LabelImg(a graphical image annotation tool) from [this GitHub Repo.](https://github.com/tzutalin/labelImg)
+   3. Setup LabelImg and draw a box around the object of interest in each image using the tool to generate XML files.
                   
 
