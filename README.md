@@ -26,7 +26,7 @@ Alternatively, if you want to create your own dataset, follow these steps:
 
 ### 1. Edit config.json
 
-- Specify path of the **images** and **annots** folder in the ` *"train_image_folder"* ` and `*"train_annot_folder"*` fields.
+- Specify path of the **images** and **annots** folder in the `"train_image_folder"` and `"train_annot_folder"` fields.
 - The `*"labels"*` setting lists the labels to be trained on. Only images, which has labels being listed, are fed to the network.
 
 ```sh
@@ -93,5 +93,5 @@ By the end of this process, the code will write the weights of the best model to
 It carries out detection on the image and write the image with detected bounding boxes to the output folder.
 
 ## Evaluation
-Compute the mAP performance of the model defined in saved_weights_name on the validation dataset defined in `*"valid_image_folder"*` and `*"valid_annot_folder"*`  > $ python evaluate.py -c config.json
+Compute the mAP performance of the model defined in saved_weights_name on the validation dataset defined in `"valid_image_folder"` and `"valid_annot_folder"`  > $ python evaluate.py -c config.json
 
