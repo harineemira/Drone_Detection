@@ -25,7 +25,7 @@ Alternatively, if you want to create your own dataset, follow these steps:
 
 ### 1. Edit config.json
 
-```sh
+```json
 {
     "model" : {
         "min_input_size":       288,
