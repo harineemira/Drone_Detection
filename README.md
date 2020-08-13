@@ -42,11 +42,11 @@ Specify path of the **images** and **annots** folder in the *"train_image_folder
         "train_annot_folder":   "F:/Drone/Drone_mira_dataset/annots/",
         "cache_name":           "drone_train.pkl",
 
-        "train_times":          8,       # the number of time to cycle through the training set, useful for small datasets
-        "pretrained_weights":   "",      # specify the path of the pretrained weights, but it's fine to start from scratch       
-        "batch_size":           2,       # the number of images to read in each batch
+        "train_times":          8,       # the no. of times to cycle through the training set,useful for small datasets
+        "pretrained_weights":   "",      # specify path of the pretrained weights,but it's fine to start from scratch       
+        "batch_size":           2,       # the no. of images to read in each batch
         "learning_rate":        1e-4,    # the base learning rate of the default Adam rate scheduler
-        "nb_epochs":            50,      # number of epoches
+        "nb_epochs":            50,      # no. of epoches
         "warmup_epochs":        3,       
         "ignore_thresh":        0.5,
         "gpus":                 "0,1",
@@ -59,7 +59,7 @@ Specify path of the **images** and **annots** folder in the *"train_image_folder
 
         "tensorboard_dir":      "logs",
         "saved_weights_name":   "drone.h5",
-        "debug":                true    # turn on/off the line to print current confidence, position, size, class losses, recall
+        "debug":                true    # turn on/off the line to print current confidence,position,size,class losses,recall
     },
 
     "valid": {
