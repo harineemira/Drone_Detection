@@ -8,3 +8,6 @@ Download the pre-trained YOLOv3 weights from [here.](https://pjreddie.com/media/
 Download an image of a dog to test object detection.
 
 `$ python yolo3_one_file_to_detect_them_all.py -w yolo3.weights -i dog.jpg`
+
+Dillinger uses Gulp + Webpack for fast developing.
+Make a change in your file and instantaneously see your updates!
