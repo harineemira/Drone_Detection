@@ -26,7 +26,8 @@ Alternatively, if you want to create your own dataset, follow these steps:
 
 ### 1. Edit config.json
 
-Specify path of the **images** and **annots** folder in the *"train_image_folder"* and *"train_annot_folder"* fields
+- Specify path of the **images** and **annots** folder in the *"train_image_folder"* and *"train_annot_folder"* fields.
+- The *"labels"* setting lists the labels to be trained on. Only images, which has labels being listed, are fed to the network.
 
 ```sh
 {
@@ -42,11 +43,11 @@ Specify path of the **images** and **annots** folder in the *"train_image_folder
         "train_annot_folder":   "F:/Drone/Drone_mira_dataset/annots/",
         "cache_name":           "drone_train.pkl",
 
-        "train_times":          8,       # the no. of times to cycle through the training set,useful for small datasets
-        "pretrained_weights":   "",      # specify path of the pretrained weights,but it's fine to start from scratch       
-        "batch_size":           2,       # the no. of images to read in each batch
-        "learning_rate":        1e-4,    # the base learning rate of the default Adam rate scheduler
-        "nb_epochs":            50,      # no. of epoches
+        "train_times":          8,     # the no. of times to cycle through the training set
+        "pretrained_weights":   "",    # specify path of pretrained weights,but it's fine to start from scratch       
+        "batch_size":           2,     # the no. of images to read in each batch
+        "learning_rate":        1e-4,  # the base learning rate of the default Adam rate scheduler
+        "nb_epochs":            50,    # no. of epoches
         "warmup_epochs":        3,       
         "ignore_thresh":        0.5,
         "gpus":                 "0,1",
@@ -58,7 +59,7 @@ Specify path of the **images** and **annots** folder in the *"train_image_folder
         "class_scale":          1,
 
         "tensorboard_dir":      "logs",
-        "saved_weights_name":   "drone.h5",
+        "saved_weights_name":   "drone.h5", # name of model file to which our trained model is saved
         "debug":                true    # turn on/off the line to print current confidence,position,size,class losses,recall
     },
 
@@ -70,6 +71,12 @@ Specify path of the **images** and **annots** folder in the *"train_image_folder
         "valid_times":          1
     }
 }
-
 ```
 
+### 2. Generate anchors for your dataset
+  > $ python gen_anchors.py -c config.json
+Copy the generated anchors printed on the terminal to the anchors setting in config.json.
+
+### 3. Start the training process
+  > $ python train.py -c config.json
+By the end of this process, the code will write the weights of the best model to file drone.h5 (or whatever name specified in the setting "saved_weights_name" in the config.json file). The training process stops when the loss on the validation set is not improved in 3 consecutive epoches.
