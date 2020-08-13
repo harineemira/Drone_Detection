@@ -75,21 +75,21 @@ Alternatively, if you want to create your own dataset, follow these steps:
 ```
 
 ### 2. Generate anchors for your dataset
-  > ```shell 
-  > $ python gen_anchors.py -c config.json
-  > ```
+   > ```shell 
+   > $ python gen_anchors.py -c config.json
+   > ```
 Copy the generated anchors printed on the terminal to the anchors setting in config.json.
 
 ### 3. Start the training process
-  > ```shell 
-  > $ python train.py -c config.json
-  > ```
+   > ```shell 
+   > $ python train.py -c config.json
+   > ```
 By the end of this process, the code will write the weights of the best model to file drone.h5 (or whatever name specified in the setting "saved_weights_name" in the config.json file). The training process stops when the loss on the validation set is not improved in 3 consecutive epoches.
 
 ### 4. Perform detection using trained weights on image, set of images, video, or webcam
-  > ```shell 
-  > $ python predict.py -c config.json -i /path/to/image/or/vide
-  > ```
+   > ```shell 
+   > $ python predict.py -c config.json -i /path/to/image/or/video/or/cam
+   > ```
 - For an image use : `$ python predict.py -c config.json -i test.jpg`
 - For a video  use : `$ python predict.py -c config.json -i test.mp4`
 - For a real-time feed use : $ For an image use : `$ python predict.py -c config.json -i webcam`
@@ -98,5 +98,7 @@ It carries out detection on the image and write the image with detected bounding
 
 ## Evaluation
 Compute the mAP performance of the model defined in saved_weights_name on the validation dataset defined in `"valid_image_folder"` and `"valid_annot_folder"`  
-> `$ python evaluate.py -c config.json`
+   > ```shell 
+   > $ python evaluate.py -c config.json
+   > ```
 
