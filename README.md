@@ -20,12 +20,15 @@ Alternatively, if you want to create your own dataset, follow these steps:
    1. Collect images from Kaggle Dataset or Google Images.
    2. Download LabelImg(a graphical image annotation tool) from [this GitHub Repo.](https://github.com/tzutalin/labelImg)
    3. Setup LabelImg and draw a box around the object of interest in each image using the tool to generate XML files.
+   4. Place all your dataset images in the **images** folder and the xml files in the **annots** folder.
 
 ## Training
 
 ### 1. Edit config.json
 
-```html
+Specify path of the **images** and **annots** folder in the *"train_image_folder"* and *"train_annot_folder"* fields
+
+```sh
 {
     "model" : {
         "min_input_size":       288,
@@ -35,7 +38,7 @@ Alternatively, if you want to create your own dataset, follow these steps:
     },
 
     "train": {
-        "train_image_folder":   "F:/Drone/Drone_mira_dataset/images/",
+        "train_image_folder":   "F:/Drone/Drone_mira_dataset/images/", 
         "train_annot_folder":   "F:/Drone/Drone_mira_dataset/annots/",
         "cache_name":           "drone_train.pkl",
 
@@ -56,7 +59,7 @@ Alternatively, if you want to create your own dataset, follow these steps:
 
         "tensorboard_dir":      "logs",
         "saved_weights_name":   "drone.h5",
-        "debug":                true    # turn on/off the line to print current confidence, position, size, class losses and recall
+        "debug":                true    # turn on/off the line to print current confidence, position, size, class losses, recall
     },
 
     "valid": {
