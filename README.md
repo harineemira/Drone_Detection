@@ -56,7 +56,7 @@ Alternatively, if you want to create your own dataset, follow these steps:
 
         "tensorboard_dir":      "logs",
         "saved_weights_name":   "drone.h5",
-        "debug":                true    # turn on/off the line that prints current confidence, position, size, class losses and recall
+        "debug":                true    # turn on/off the line to print current confidence, position, size, class losses and recall
     },
 
     "valid": {
