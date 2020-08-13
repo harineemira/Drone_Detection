@@ -93,7 +93,5 @@ By the end of this process, the code will write the weights of the best model to
 It carries out detection on the image and write the image with detected bounding boxes to the output folder.
 
 ## Evaluation
+Compute the mAP performance of the model defined in saved_weights_name on the validation dataset defined in `*"valid_image_folder"*` and `*"valid_annot_folder"*`  > $ python evaluate.py -c config.json
 
-python evaluate.py -c config.json
-
-Compute the mAP performance of the model defined in saved_weights_name on the validation dataset defined in `*"valid_image_folder"*` and `*"valid_annot_folder"*`
