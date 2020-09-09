@@ -104,4 +104,4 @@ Compute the mAP performance of the model defined in saved_weights_name on the va
 
 ## OUTPUT
 
-- Download the [sample output for drone detection in a video.] (https://github.com/harineemira/Drone_Detection/blob/master/Outputs/Drone_Video_Detection.mp4?raw=true)
+- Download the [sample output for drone detection in a video.](https://github.com/harineemira/Drone_Detection/blob/master/Outputs/Drone_Video_Detection.mp4?raw=true)
